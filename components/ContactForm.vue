@@ -8,10 +8,10 @@ import flower from "@/assets/2.png";
       netlify
       action="/contact/thanks"
       method="POST"
-      name="contact"
+      name="contactFormTest"
       netlify-honeypot="bot-field"
     >
-      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="form-name" value="contactFormTest" />
       <div class="flex">
         <div>
           <label class="required" for="name">Name</label>
