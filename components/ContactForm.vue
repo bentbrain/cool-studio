@@ -65,7 +65,7 @@ const data = reactive({
           placeholder="..."
         ></textarea>
       </div>
-      <Button>Submit</Button>
+      <Button type="submit">Submit</Button>
     </form>
   </div>
 </template>
