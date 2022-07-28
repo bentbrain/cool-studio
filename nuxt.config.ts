@@ -7,8 +7,4 @@ export default defineNuxtConfig({
       routes: ["/contact"],
     },
   },
-  buildModules: ["@pinia/nuxt"],
-  router: {
-    base: "/",
-  },
 });
