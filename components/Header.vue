@@ -53,13 +53,13 @@ const menuOpen = useState("test", () => false);
         <NuxtLink @click="menuOpen = !menuOpen" to="/about">
           <li>About</li>
         </NuxtLink>
-        <NuxtLink @click="menuOpen = !menuOpen" to="studio">
+        <NuxtLink @click="menuOpen = !menuOpen" to="/studio">
           <li>The Studio</li>
         </NuxtLink>
-        <NuxtLink @click="menuOpen = !menuOpen" to="residents">
+        <NuxtLink @click="menuOpen = !menuOpen" to="/residents">
           <li>Residents</li>
         </NuxtLink>
-        <NuxtLink @click="menuOpen = !menuOpen" to="community">
+        <NuxtLink @click="menuOpen = !menuOpen" to="/community">
           <li>Community</li>
         </NuxtLink>
       </ol>
