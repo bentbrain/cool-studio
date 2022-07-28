@@ -29,7 +29,7 @@ import flower from "@/assets/2.png";
       </div>
       <div>
         <label for="date">Studio Date</label>
-        <input type="date" name="date" placeholder="postie@auspost.com.au" />
+        <input type="date" name="date" placeholder="Email" />
       </div>
       <div class="message">
         <label for="message">Message</label>
