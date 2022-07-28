@@ -3,41 +3,7 @@ import flower from "@/assets/2.png";
 </script>
 
 <template>
-  <div>
-    <form
-      netlify
-      action="/contact/thanks"
-      method="POST"
-      name="contactFormTest"
-      netlify-honeypot="bot-field"
-    >
-      <input type="hidden" name="form-name" value="contactFormTest" />
-      <div class="flex">
-        <div>
-          <label class="required" for="name">Name</label>
-          <input required type="text" name="name" placeholder="Post Malone" />
-        </div>
-        <div>
-          <label class="required" for="email">Email</label>
-          <input
-            required
-            type="email"
-            name="email"
-            placeholder="postie@auspost.com.au"
-          />
-        </div>
-      </div>
-      <div>
-        <label for="date">Studio Date</label>
-        <input type="date" name="date" placeholder="Email" />
-      </div>
-      <div class="message">
-        <label for="message">Message</label>
-        <textarea type="message" name="message" placeholder="..."></textarea>
-      </div>
-      <Button type="submit">Submit</Button>
-    </form>
-  </div>
+  <div></div>
 </template>
 
 <style scoped>
