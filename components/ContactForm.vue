@@ -1,22 +1,12 @@
 <script setup>
 import flower from "@/assets/2.png";
-
-const data = reactive({
-  contact: {
-    name: "",
-    email: "",
-    date: "",
-    message: "",
-  },
-});
 </script>
 
 <template>
   <div>
     <form
       name="contact"
-      id="contactForm"
-      netlify
+      data-netlify="true"
       method="POST"
       data-netlify-honeypot="bot-field"
       action="/contact/thanks"
@@ -25,14 +15,7 @@ const data = reactive({
       <div class="flex">
         <div>
           <label class="required" for="name">Name</label>
-          <input
-            required
-            type="text"
-            name="name"
-            id="name"
-            v-model="data.contact.name"
-            placeholder="Post Malone"
-          />
+          <input required type="text" name="name" placeholder="Post Malone" />
         </div>
         <div>
           <label class="required" for="email">Email</label>
@@ -40,31 +23,17 @@ const data = reactive({
             required
             type="email"
             name="email"
-            id="email"
-            v-model="data.contact.email"
             placeholder="postie@auspost.com.au"
           />
         </div>
       </div>
       <div>
         <label for="date">Studio Date</label>
-        <input
-          type="date"
-          name="date"
-          id="date"
-          v-model="data.contact.date"
-          placeholder="postie@auspost.com.au"
-        />
+        <input type="date" name="date" placeholder="postie@auspost.com.au" />
       </div>
       <div class="message">
         <label for="message">Message</label>
-        <textarea
-          type="message"
-          name="message"
-          id="message"
-          v-model="data.contact.message"
-          placeholder="..."
-        ></textarea>
+        <textarea type="message" name="message" placeholder="..."></textarea>
       </div>
       <Button type="submit">Submit</Button>
     </form>
