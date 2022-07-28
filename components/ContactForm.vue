@@ -18,7 +18,7 @@
       data-netlify-honeypot="bot-field"
       action="/contact/thanks"
     >
-      <!-- <input type="hidden" name="form-name" value="contactFormTest" /> -->
+      <input type="hidden" name="form-name" value="contactFormTest" />
       <div class="flex">
         <div>
           <label class="required" for="name">Name</label>
