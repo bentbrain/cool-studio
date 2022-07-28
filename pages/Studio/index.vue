@@ -1,6 +1,8 @@
 <script setup>
 import flower from "@/assets/2.png";
-
+import studio1 from "@/assets/images/studio1.webp";
+import studio2 from "@/assets/images/studio2.webp";
+import props from "@/assets/images/props-on-shelf.webp";
 const route = useRoute();
 </script>
 
@@ -27,19 +29,10 @@ const route = useRoute();
       </div>
 
       <div class="image-grid">
-        <img
-          src="https://static.wixstatic.com/media/7ba49e_f6952fea41644a0eb922c687dfab1af6~mv2.jpg/v1/fill/w_898,h_1348,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Cool%20Studio-8.jpg"
-          alt="Studio Image"
-        />
-        <img
-          src="https://static.wixstatic.com/media/7ba49e_e3ae50e0099344d5ad53dfd3f9053ae4~mv2.jpg/v1/fill/w_444,h_666,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Cool%20Studio-7.jpg"
-          alt=""
-        />
+        <img :src="studio2" alt="Studio Image" />
+        <img :src="props" alt="Equipment on Shelf" />
 
-        <img
-          src="https://static.wixstatic.com/media/7ba49e_7b7b70ea74034b6bac8ea7a0cf6497b4~mv2.jpg/v1/fill/w_444,h_666,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Cool%20Studio-10.jpg"
-          alt=""
-        />
+        <img :src="studio1" alt="Studio with Lights" />
       </div>
     </Section>
 

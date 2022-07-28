@@ -1,5 +1,7 @@
 <script setup>
-import interior from "@/assets/interior.jpg";
+import interior from "@/assets/images/interior.jpg";
+import studio1 from "@/assets/images/studio1.webp";
+import lounge1 from "@/assets/images/lounge1.webp";
 import email from "@/assets/icons/email.png";
 import instagram from "@/assets/icons/instagram.png";
 import location from "@/assets/icons/location.png";
@@ -19,16 +21,8 @@ import flower from "@/assets/2.png";
         COOL STUDIO
         <span class="light">IS A CREATIVE STUDIO AND ART SPACE.</span>
       </h1>
-      <img
-        class="image1"
-        src="https://static.wixstatic.com/media/7ba49e_7b7b70ea74034b6bac8ea7a0cf6497b4~mv2.jpg/v1/fill/w_444,h_666,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Cool%20Studio-10.jpg"
-        alt=""
-      />
-      <img
-        class="image2"
-        src="https://static.wixstatic.com/media/7ba49e_18e0446ac9e440668884e89f2a36a504~mv2.jpg/v1/fill/w_1200,h_960,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Cool%20Studio-2.jpg"
-        alt=""
-      />
+      <img class="image1" :src="studio1" alt="Studio with Light" />
+      <img class="image2" :src="lounge1" alt="Lounge Area of Studio" />
     </Section>
     <Section style="display: flex" colour="pink">
       <div
@@ -36,7 +30,7 @@ import flower from "@/assets/2.png";
         class="text"
       >
         <h2>About</h2>
-        <img class="circle" :src="interior" alt="" />
+        <img class="circle" :src="interior" alt="Props in the Studio" />
         <p>
           Cool Studio is a creative studio space for hire in Naarm/Melbourne.
           Our retro inspired converted warehouse features a large white

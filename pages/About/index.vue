@@ -1,5 +1,6 @@
 <script setup>
 import flower from "@/assets/2.png";
+import lounge2 from "@/assets/images/lounge2.webp";
 const route = useRoute();
 </script>
 
@@ -14,11 +15,7 @@ const route = useRoute();
     <Section>
       <div class="text">
         <h1 class="pageTitle">{{ route.name }}</h1>
-        <img
-          src="https://static.wixstatic.com/media/7ba49e_0518e99cd46d4326be755dcc670af9d3~mv2.jpg/v1/fill/w_428,h_642,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Cool%20Studio-1.jpg"
-          alt="Chairs in the Studio"
-          class="mobile"
-        />
+        <img :src="lounge2" alt="Chairs in the Studio" class="mobile" />
         <p>
           Cool Studio was founded by young creatives who have a passion for
           individuality and DIY self expression. We are here to provide an
@@ -41,11 +38,7 @@ const route = useRoute();
         <p>We would love to hear from you!</p>
         <NuxtLink to="/contact"><Button>Get in Touch</Button></NuxtLink>
       </div>
-      <img
-        src="https://static.wixstatic.com/media/7ba49e_0518e99cd46d4326be755dcc670af9d3~mv2.jpg/v1/fill/w_428,h_642,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Cool%20Studio-1.jpg"
-        alt="Chairs in the Studio"
-        class="desktop"
-      />
+      <img :src="lounge2" alt="Chairs in the Studio" class="desktop" />
     </Section>
   </div>
 </template>
