@@ -5,11 +5,11 @@ import flower from "@/assets/2.png";
 <template>
   <div>
     <form
-      name="contact"
-      data-netlify="true"
-      method="POST"
-      data-netlify-honeypot="bot-field"
+      netlify
       action="/contact/thanks"
+      method="POST"
+      name="contact"
+      netlify-honeypot="bot-field"
     >
       <input type="hidden" name="form-name" value="contact" />
       <div class="flex">
