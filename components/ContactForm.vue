@@ -23,7 +23,7 @@ const data = reactive({
       <input type="hidden" name="form-name" value="contact" />
       <div class="flex">
         <div>
-          <label class="required" for="name">Name:</label>
+          <label class="required" for="name">Name</label>
           <input
             required
             type="text"
