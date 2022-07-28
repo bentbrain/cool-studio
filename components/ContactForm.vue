@@ -48,7 +48,7 @@ function updateStoredName() {
         <label for="message">Message</label>
         <textarea type="message" name="message" placeholder="..."></textarea>
       </div>
-      <Button @click="updateStoredName()" type="submit">Submit</Button>
+      <Button type="submit">Submit</Button>
     </form>
   </div>
 </template>

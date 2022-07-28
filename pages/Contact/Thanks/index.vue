@@ -16,7 +16,7 @@ const route = useRoute();
     </Html>
     <Section
       ><div class="text">
-        <h1 class="pageTitle">Thanks {{ storageName }}!</h1>
+        <h1 class="pageTitle">Thanks!</h1>
         <p>Keep an eye on your email, we'll be in touch.</p>
         <NuxtLink to="/"><Button>Home</Button></NuxtLink>
       </div>
