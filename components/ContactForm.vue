@@ -13,10 +13,10 @@ const data = reactive({
 
 <template>
   <div>
-    <form name="contact" id="contactForm" data-netlify="true">
+    <form name="contact" id="contactForm" data-netlify="true" method="POST">
       <div class="flex">
         <div>
-          <label class="required" for="name">Name</label>
+          <label class="required" for="name">Name:</label>
           <input
             required
             type="text"
@@ -58,7 +58,7 @@ const data = reactive({
           placeholder="..."
         ></textarea>
       </div>
-      <Button type="submit" form="contactForm" value="Submit">Submit</Button>
+      <Button>Submit</Button>
     </form>
   </div>
 </template>
