@@ -13,7 +13,14 @@ const data = reactive({
 
 <template>
   <div>
-    <form name="contact" id="contactForm" data-netlify="true" method="POST">
+    <form
+      name="contact"
+      id="contactForm"
+      netlify
+      method="POST"
+      data-netlify-honeypot="bot-field"
+    >
+      <input type="hidden" name="form-name" value="contact" />
       <div class="flex">
         <div>
           <label class="required" for="name">Name:</label>
