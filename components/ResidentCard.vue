@@ -1,10 +1,21 @@
 <script setup>
 import socials from "@/assets/socials.json";
+import instagram from "@/assets/icons/socials/instagram.webp";
+import facebook from "@/assets/icons/socials/facebook.webp";
+import twitter from "@/assets/icons/socials/twitter.webp";
+import youtube from "@/assets/icons/socials/youtube.webp";
 
 const props = defineProps({
   resident: Object,
-  index: Number,
+  index: String,
 });
+
+const socialImages = {
+  instagram: instagram,
+  facebook: facebook,
+  twitter: twitter,
+  youtube: youtube,
+};
 
 const colours = ["pink", "yellow", "green", "orange"];
 </script>
@@ -18,7 +29,7 @@ const colours = ["pink", "yellow", "green", "orange"];
       <h2 v-else>{{ resident.first_name }}</h2>
       <div class="socials">
         <a v-for="(social, key, i) in resident.socials" :key="i" :href="social"
-          ><img :src="socials[key]" :alt="`${key} Icon`"
+          ><img :src="socialImages[key]" :alt="`${key} Icon`"
         /></a>
       </div>
     </div>
