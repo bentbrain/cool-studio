@@ -13,7 +13,7 @@ const data = reactive({
 
 <template>
   <div>
-    <form id="contactForm">
+    <form name="contact" id="contactForm" data-netlify="true">
       <div class="flex">
         <div>
           <label class="required" for="name">Name</label>
