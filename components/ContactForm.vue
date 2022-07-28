@@ -1,12 +1,12 @@
 <script setup>
-import { useLocalStorage } from "@vueuse/core";
-const newName = ref("");
+// import { useLocalStorage } from "@vueuse/core";
+// const newName = ref("");
 
-const storageName = useLocalStorage("name", "");
+// const storageName = useLocalStorage("name", "");
 
-function updateStoredName() {
-  storageName.value = newName.value;
-}
+// function updateStoredName() {
+//   storageName.value = newName.value;
+// }
 </script>
 
 <template>
@@ -22,13 +22,7 @@ function updateStoredName() {
       <div class="flex">
         <div>
           <label class="required" for="name">Name</label>
-          <input
-            v-model="newName"
-            required
-            type="text"
-            name="name"
-            placeholder="Post Malone"
-          />
+          <input required type="text" name="name" placeholder="Post Malone" />
         </div>
         <div>
           <label class="required" for="email">Email</label>

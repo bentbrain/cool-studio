@@ -1,8 +1,8 @@
 <script setup>
 import flower from "@/assets/2.png";
-import { useLocalStorage } from "@vueuse/core";
+// import { useLocalStorage } from "@vueuse/core";
 
-const storageName = useLocalStorage("name");
+// const storageName = useLocalStorage("name");
 const route = useRoute();
 </script>
 
