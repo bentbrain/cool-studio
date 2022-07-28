@@ -1,0 +1,257 @@
+<script setup>
+import flower from "@/assets/2.png";
+
+const route = useRoute();
+</script>
+
+<template>
+  <div>
+    <Html>
+      <Head>
+        <Title>{{ route.name }} | Cool Studio</Title>
+        <Link rel="icon" :href="flower" as="script" />
+      </Head>
+    </Html>
+    <Section>
+      <div class="text">
+        <h1 class="pageTitle">{{ route.name }}</h1>
+        <p>
+          The Studio consists of a white cyclorama that is 5.6m wide, 4m high
+          and 5.4m deep and is suitable for all types of photo or film shoots.
+          The space includes a retro inspired hair and makeup station, lounge
+          area, kitchenette, bathroom and a roller door for unloading gear and
+          flooding the space with natural light. We also offer access to
+          in-house props along with gear hire. If you need any assistance with
+          your shoot, our residents are always happy to lend a hand!
+        </p>
+      </div>
+
+      <div class="image-grid">
+        <img
+          src="https://static.wixstatic.com/media/7ba49e_f6952fea41644a0eb922c687dfab1af6~mv2.jpg/v1/fill/w_898,h_1348,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Cool%20Studio-8.jpg"
+          alt="Studio Image"
+        />
+        <img
+          src="https://static.wixstatic.com/media/7ba49e_e3ae50e0099344d5ad53dfd3f9053ae4~mv2.jpg/v1/fill/w_444,h_666,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Cool%20Studio-7.jpg"
+          alt=""
+        />
+
+        <img
+          src="https://static.wixstatic.com/media/7ba49e_7b7b70ea74034b6bac8ea7a0cf6497b4~mv2.jpg/v1/fill/w_444,h_666,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Cool%20Studio-10.jpg"
+          alt=""
+        />
+      </div>
+    </Section>
+
+    <Section>
+      <div class="text-full">
+        <h2>Rates</h2>
+        <table>
+          <tr>
+            <th>Short Session</th>
+            <th>Half Day Session</th>
+            <th>Full Day Session</th>
+          </tr>
+          <tr>
+            <td>2 Hours</td>
+            <td>4 Hours</td>
+            <td>8 Hours</td>
+          </tr>
+          <tr>
+            <td>$160</td>
+            <td>$230</td>
+            <td>$330</td>
+          </tr>
+        </table>
+        <p style="text-align: center; font-size: 0.8em">
+          For student discounts or bookings outside these options, contact us.
+          Prices are excl. GST
+        </p>
+        <NuxtLink
+          style="text-decoration: none; display: inline-block"
+          to="/contact"
+          ><Button style="margin: 1rem auto 2rem">Book Now</Button></NuxtLink
+        >
+      </div>
+      <div class="text-block left">
+        <h3>Studio Hire Includes</h3>
+        <div class="list-grid">
+          <ul>
+            <li>Use of All Facilities</li>
+            <li>3 Phase Power</li>
+            <li>Free Wi-Fi</li>
+            <li>6 X 10kg Sandbags</li>
+            <li>Tressle Table</li>
+          </ul>
+          <ul>
+            <li>4 X Polyboards With Stands</li>
+            <li>Blackout Curtain</li>
+            <li>Extension Cables + Power Board</li>
+            <li>Step Ladder</li>
+          </ul>
+          <ul>
+            <li>Full Length Ladder</li>
+            <li>Trolley</li>
+            <li>Industrial Heater</li>
+            <li>Free Standing Mirror</li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-block right">
+        <h3>Available Extras</h3>
+        <ul class="full">
+          <li>
+            Lighting Hire - $100 (see gear list
+            <a
+              href="https://www.coolstudio.com.au/_files/ugd/070419_b0cbdaaea65e4dfb876826cf43272a09.pdf"
+              >here</a
+            >)
+          </li>
+          <li>Cyclorama Repaint - $80</li>
+          <li>Coloured Backdrop Hire - $70</li>
+        </ul>
+      </div>
+    </Section>
+  </div>
+</template>
+
+<style scoped>
+h1 {
+  grid-column: span 6;
+}
+
+h3 {
+  font-size: 2rem;
+  grid-column: 1 / -1;
+  margin-bottom: 0.5em;
+}
+
+ul {
+  list-style-position: outside;
+  list-style-type: none;
+  padding: 0;
+  line-height: 1.2;
+
+  margin-block: auto;
+}
+
+ul li {
+  margin-bottom: 0.5em;
+}
+.text {
+  grid-column: 1 / span 6;
+}
+
+.text-block {
+  grid-column: span 6;
+  text-align: center;
+  color: white;
+
+  border-radius: 0.5rem;
+  padding-block: 2rem;
+  padding-inline: 1rem;
+}
+
+.text-block a {
+  color: white;
+}
+
+.text-block.left {
+  background-color: var(--pink);
+}
+
+.text-block.right {
+  background-color: var(--orange);
+  display: flex;
+  flex-direction: column;
+}
+
+.list-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.5rem;
+}
+
+.text-full {
+  grid-column: 1 / -1;
+  width: min(65ch, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.image-grid {
+  grid-column: span 6;
+  grid-row: span 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  height: min-content;
+}
+
+.image-grid img:first-of-type {
+  grid-column: span 2;
+  grid-row: span 2;
+  object-fit: cover;
+}
+
+table {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  table-layout: fixed;
+}
+
+tr:nth-child(2) {
+  background: var(--orange);
+}
+
+tr:nth-child(3) {
+  background: var(--yellow);
+}
+
+tr:hover {
+  filter: brightness(1.03);
+}
+
+tr:first-of-type {
+  background: var(--pink);
+  color: black;
+}
+
+td,
+th {
+  vertical-align: center;
+  padding-inline: 1em;
+  padding-block: 0.5em;
+  font-weight: bold;
+}
+
+td:first-of-type,
+th:first-of-type {
+  border-radius: 100vw 0 0 100vw;
+}
+
+td:last-of-type,
+th:last-of-type {
+  border-radius: 0 100vw 100vw 0;
+}
+
+@media (max-width: 600px) {
+  .text-full,
+  .text-block,
+  .text {
+    grid-column: 1 / -1;
+  }
+  .image-grid {
+    grid-column: 1 / -1;
+    grid-row: unset;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .image-grid img:first-of-type {
+    grid-column: 1 / -1;
+    height: unset;
+  }
+}
+</style>

@@ -1,0 +1,65 @@
+{
+    "1": {
+        "name": "Charlie Buxton-Leslie",
+        "first_name": "Charlie",
+        "website": "https://www.charlesbuxtonleslie.com/",
+        "slug": "charlie-buxton-lesie",
+        "description": "Charles is a director based in Melbourne, focusing on music videos and fashion content. He has worked with various Australian artists and has developed a distinct visual style which focuses on creating unique and dynamic content. His goal in the industry is to build meaningful connections with artists and help to elevate their brand and content in a way that honestly reflects themselves and their music. He is also a member of the collective, Freakclub.",
+        "socials": {
+            "instagram": "https://www.instagram.com/chabuxles/"
+        },
+        "featured_media": {
+            "image": "https://static.wixstatic.com/media/7ba49e_bcb0b39b26d8462eb7e9c6518f583d8f~mv2.jpg/v1/fill/w_716,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Bindii%20Patch%20Set%20Design-8.jpg",
+            "title": "Bindii Patch",
+            "description": "Music Video Directed by Charles Buxton-Leslie"
+        }
+    },
+    "2": {
+        "name": "Briana Da Silva",
+        "website": "https://www.briannadasilvaphotography.com/",
+        "first_name": "Briana",
+        "slug": "briana-da-silva",
+        "description": "Brianna is a photographer and production designer who specialises in fashion and music. Her fascination with colour and other-worldy elements carries across into her photography and set design work. Using a combination of 35mm film and digital photography, every shoot brings elements of Brianna's style whilst staying true to the client's unique brand. She is also a member of the collective, Freakclub.",
+        "socials": {
+            "instagram": "https://www.instagram.com/bbds_/"
+        },
+        "featured_media": {
+            "image": "https://static.wixstatic.com/media/070419_1a90433bf6ba41d69578a46a6b516c10~mv2.jpg/v1/crop/x_136,y_0,w_5164,h_3058/fill/w_716,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/16-9%20Yergurl%20Puppy%20Dog%20Press%20-%20Studio%20-4.jpg",
+            "title": "Yergurl",
+            "description": "by Brianna Da Silva"
+        }
+    },
+    "3": {
+        "name": "Freakclub",
+        "first_name": "Freakclub",
+        "website": "https://freakclubrep.com/",
+        "slug": "freakclub",
+        "description": "FREAKCLUB is an Australian hip-hop collective based in Melbourne, Australia. The group is made up of independent musicians, directors, photographers and designers working together to create authentic art that celebrates individuality, equality and the power of DIY self expression.",
+        "socials": {
+            "instagram": "https://www.instagram.com/freakclubrep/",
+            "facebook": "https://www.facebook.com/freakclubrep",
+            "twitter": "https://twitter.com/freakclubrep?lang=en",
+            "youtube": "https://www.youtube.com/channel/UCyp9bQnALTKG9RAnz4_N-2w"
+        },
+        "featured_media": {
+            "image": "https://static.wixstatic.com/media/070419_3b66e8001d5540c8aa9fb81bc0c7efbd~mv2.jpg/v1/fill/w_716,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/No%20Way%20Press%20Photo%20low%20res.jpg",
+            "title": "",
+            "description": "Freakclub"
+        }
+    },
+    "4": {
+        "name": "Madeline Assi",
+        "first_name": "Madeline",
+        "website": "",
+        "slug": "madeline-assi",
+        "description": "Madeline Assi is a fashion designer, creative director and stylist based in Melbourne. She specialises in designing and making one of a kind pieces and custom styling for emerging Australian talent. Her styling practise focuses on using local brands and designers and up-cycling pieces as a means of supporting her community. Madeline has curated a handful of events including Angel Energy for VAMFF 2020 and Umana for NGV Design Week 2021 where she exercised her skills in event management and creative direction of projects, photoshoots and film. Madeline also owns a sustainably minded swimwear & streetwear hybrid brand, Skïnidip.",
+        "socials": {
+            "instagram": "https://www.instagram.com/lovemadeline_/"
+        },
+        "featured_media": {
+            "image": "https://static.wixstatic.com/media/070419_9ba6e75d64954178b7676125c3237a1f~mv2.jpg/v1/crop/x_0,y_461,w_2204,h_1304/fill/w_716,h_424,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Skinidip%20-%20scans-9%20(1).jpg",
+            "title": "Skinidip",
+            "description": "by Madeline Assi"
+        }
+    }
+}
