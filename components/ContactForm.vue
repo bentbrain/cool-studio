@@ -19,6 +19,7 @@ const data = reactive({
       netlify
       method="POST"
       data-netlify-honeypot="bot-field"
+      action="/contact/thanks"
     >
       <input type="hidden" name="form-name" value="contact" />
       <div class="flex">
