@@ -1,4 +1,5 @@
 <script setup>
+import instagram from "@/assets/icons/socials/instagram.webp";
 const year = new Date().getFullYear();
 
 onMounted(async () => {
@@ -20,7 +21,13 @@ onMounted(async () => {
         We pay our respect to their elders past and present and extend that
         respect to all Aboriginal and Torres Strait Islander peoples today.
       </p>
-      <p class="copyright">&#169; Cool Studio {{ year }}</p>
+      <p class="copyright">
+        <a class="instagram" href="https://instagram.com/coolstudio.jpg"
+          ><img :src="instagram" alt=""
+        /></a>
+        &#169; Cool Studio {{ year }} | Website by
+        <a href="https://instagram.com/bent.brain">@bent.brain</a>
+      </p>
     </div>
   </footer>
 </template>
@@ -31,7 +38,19 @@ p {
   font-size: 0.8em;
 }
 
-.copyright {
-  margin-top: 0.5rem;
+.copyright a {
+  color: unset;
+}
+
+.instagram {
+  display: block;
+  width: max-content;
+  margin: 0 auto;
+  margin-block: 0.5rem;
+}
+
+.copyright img {
+  display: block;
+  max-height: 2rem;
 }
 </style>

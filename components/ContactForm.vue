@@ -1,4 +1,13 @@
-<script setup></script>
+<script setup>
+import { useLocalStorage } from "@vueuse/core";
+const newName = ref("");
+
+const storageName = useLocalStorage("name", "");
+
+function updateStoredName() {
+  storageName.value = newName.value;
+}
+</script>
 
 <template>
   <div>
@@ -7,12 +16,19 @@
       method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
+      action="/contact/thanks"
     >
       <input type="hidden" name="form-name" value="contactFormTest" />
       <div class="flex">
         <div>
           <label class="required" for="name">Name</label>
-          <input required type="text" name="name" placeholder="Post Malone" />
+          <input
+            v-model="newName"
+            required
+            type="text"
+            name="name"
+            placeholder="Post Malone"
+          />
         </div>
         <div>
           <label class="required" for="email">Email</label>
@@ -32,7 +48,7 @@
         <label for="message">Message</label>
         <textarea type="message" name="message" placeholder="..."></textarea>
       </div>
-      <Button type="submit">Submit</Button>
+      <Button @click="updateStoredName()" type="submit">Submit</Button>
     </form>
   </div>
 </template>

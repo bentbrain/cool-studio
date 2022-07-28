@@ -1,4 +1,10 @@
-<script setup></script>
+<script setup>
+import flower from "@/assets/2.png";
+import { useLocalStorage } from "@vueuse/core";
+
+const storageName = useLocalStorage("name");
+const route = useRoute();
+</script>
 
 <template>
   <div>
@@ -9,15 +15,29 @@
       </Head>
     </Html>
     <Section
-      ><h1 class="pageTitle">{{ route.name }}</h1>
+      ><div class="text">
+        <h1 class="pageTitle">Thanks {{ storageName }}!</h1>
+        <p>Keep an eye on your email, we'll be in touch.</p>
+        <NuxtLink to="/"><Button>Home</Button></NuxtLink>
+      </div>
     </Section>
   </div>
 </template>
 
 <style scoped>
-h1 {
+.text {
   text-align: center;
   grid-column: 1 / -1;
   margin-bottom: 2rem;
+}
+
+p {
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+
+.text a {
+  display: inline-block;
+  margin: 0 auto;
+  text-decoration: none;
 }
 </style>

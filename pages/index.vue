@@ -16,13 +16,6 @@ import flower from "@/assets/2.png";
       </Head>
       <Link rel="icon" :href="flower" as="script" />
     </Html>
-    <Section>
-      <form name="test" netlify>
-        <label for="text">text</label>
-        <input name="testInput" type="text" />
-        <button>submit</button>
-      </form>
-    </Section>
     <Section style="display: flex" colour="green">
       <h1 style="grid-column: 1 / -1; grid-row: 1">
         COOL STUDIO
