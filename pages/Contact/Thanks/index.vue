@@ -1,8 +1,8 @@
 <script setup>
 import flower from "@/assets/2.png";
-// import { useLocalStorage } from "@vueuse/core";
+import { useLocalStorage } from "@vueuse/core";
 
-// const storageName = useLocalStorage("name");
+const storageName = useLocalStorage("name");
 const route = useRoute();
 </script>
 
@@ -16,7 +16,7 @@ const route = useRoute();
     </Html>
     <Section
       ><div class="text">
-        <h1 class="pageTitle">Thanks!</h1>
+        <h1 class="pageTitle">Thanks {{ storageName }}!</h1>
         <p>Keep an eye on your email, we'll be in touch.</p>
         <NuxtLink to="/"><Button>Home</Button></NuxtLink>
       </div>
