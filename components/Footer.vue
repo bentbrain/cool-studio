@@ -2,6 +2,8 @@
 import instagram from "@/assets/icons/socials/instagram.webp";
 const year = new Date().getFullYear();
 
+const footer = await queryContent("footer").findOne();
+
 onMounted(async () => {
   const footer = document.querySelector("footer");
   const wrapper = document.querySelector(".content-wrapper");
@@ -13,14 +15,10 @@ onMounted(async () => {
 <template>
   <footer ref="footer">
     <div class="text">
-      <p>
-        Cool Studio acknowledges the Traditional Custodians of country
-        throughout Australia and their connections to land, sea and community.
+      <p v-for="(ps, i) in footer.excerpt.children" :key="i">
+        {{ ps.children[0].value }}
       </p>
-      <p>
-        We pay our respect to their elders past and present and extend that
-        respect to all Aboriginal and Torres Strait Islander peoples today.
-      </p>
+
       <p class="copyright">
         <a class="instagram" href="https://instagram.com/coolstudio.jpg"
           ><img :src="instagram" alt=""

@@ -1,6 +1,9 @@
 <script setup>
 import flower from "@/assets/2.png";
 import lounge2 from "@/assets/images/lounge2.webp";
+
+const text = await queryContent("about/text").findOne();
+
 const route = useRoute();
 </script>
 
@@ -8,34 +11,17 @@ const route = useRoute();
   <div>
     <Html>
       <Head>
-        <Title>{{ route.name }} | Cool Studio</Title>
+        <Title> {{ route.name }} | Cool Studio</Title>
         <Link rel="icon" :href="flower" as="script" />
       </Head>
     </Html>
     <Section>
       <div class="text">
-        <h1 class="pageTitle">{{ route.name }}</h1>
+        <h1 class="pageTitle">About</h1>
         <img :src="lounge2" alt="Chairs in the Studio" class="mobile" />
-        <p>
-          Cool Studio was founded by young creatives who have a passion for
-          individuality and DIY self expression. We are here to provide an
-          affordable and accessible creative space for emerging artists,
-          students and local brands and businesses. Our community is important
-          to us and we want everyone to enjoy our space as much as we do.
+        <p v-for="(ps, i) in text.excerpt.children" :key="i">
+          {{ ps.children[0].value }}
         </p>
-        <p>
-          Along with studio hire, we also offer packages if you require a
-          photographer, videographer, director or stylist for your shoot. We
-          also offer residencies where you can receive discounts on studio hire
-          and a range of other benefits.
-        </p>
-        <p>
-          We are located a 3 minute drive from Northland shopping centre and a 5
-          minute drive from Offshoot Rentals for all extra retail and gear
-          requirements.
-        </p>
-        <p>Please get in touch if you have any questions.</p>
-        <p>We would love to hear from you!</p>
         <NuxtLink to="/contact"><Button>Get in Touch</Button></NuxtLink>
       </div>
       <img :src="lounge2" alt="Chairs in the Studio" class="desktop" />

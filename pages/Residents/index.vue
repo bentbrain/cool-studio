@@ -13,7 +13,7 @@ const route = useRoute();
       </Head>
     </Html>
     <Section
-      ><h1 class="pageTitle">{{ route.name }}</h1>
+      ><h1 class="pageTitle">Residents</h1>
       <ResidentCard
         class="resident"
         v-for="(resident, i) in data"

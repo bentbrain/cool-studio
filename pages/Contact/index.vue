@@ -12,7 +12,7 @@ const route = useRoute();
       </Head>
     </Html>
     <Section
-      ><h1 class="pageTitle">{{ route.name }}</h1>
+      ><h1 class="pageTitle">Contact</h1>
       <ContactForm style="grid-column: 1 / -1" />
     </Section>
   </div>

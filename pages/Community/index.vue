@@ -2,6 +2,7 @@
 import flower from "@/assets/2.png";
 import tvs from "@/assets/images/tvs.jpg";
 const route = useRoute();
+const text = await queryContent("community/text").findOne();
 </script>
 
 <template>
@@ -14,12 +15,9 @@ const route = useRoute();
     </Html>
     <Section
       ><div class="text">
-        <h1 class="pageTitle">{{ route.name }}</h1>
-        <p>
-          Cool Studio is all about community and creativity. We love having
-          exhibitions, markets, launch parties and any creatively driven event
-          you can think of, in our space. Check back soon for updates on
-          upcoming events...
+        <h1 class="pageTitle">Community</h1>
+        <p v-for="(ps, i) in text.excerpt.children" :key="i">
+          {{ ps.children[0].value }}
         </p>
       </div>
       <img class="tvs" :src="tvs" alt="TVs Stacked" />

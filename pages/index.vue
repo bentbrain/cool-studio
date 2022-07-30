@@ -6,6 +6,9 @@ import email from "@/assets/icons/email.png";
 import instagram from "@/assets/icons/instagram.png";
 import location from "@/assets/icons/location.png";
 import flower from "@/assets/2.png";
+
+const intro = await queryContent("home/intro").findOne();
+const about = await queryContent("home/about").findOne();
 </script>
 
 <template>
@@ -18,8 +21,8 @@ import flower from "@/assets/2.png";
     </Html>
     <Section style="display: flex" colour="green">
       <h1 style="grid-column: 1 / -1; grid-row: 1">
-        COOL STUDIO
-        <span class="light">IS A CREATIVE STUDIO AND ART SPACE.</span>
+        {{ intro.title }}
+        <span class="light"> {{ intro.description }}</span>
       </h1>
       <img class="image1" :src="studio1" alt="Studio with Light" />
       <img class="image2" :src="lounge1" alt="Lounge Area of Studio" />
@@ -32,15 +35,7 @@ import flower from "@/assets/2.png";
         <h2>About</h2>
         <img class="circle" :src="interior" alt="Props in the Studio" />
         <p>
-          Cool Studio is a creative studio space for hire in Naarm/Melbourne.
-          Our retro inspired converted warehouse features a large white
-          cyclorama, makeup station, kitchenette, bathroom facilities and three
-          phase power. The studio offers controlled lighting or natural
-          lighting, with a large window and roller door giving the option to
-          flood the studio with beautiful daylight. ​ Cool Studio appeals to
-          emerging creatives with our affordable hiring rates and flexible
-          booking times. We also offer the option of assistance from our
-          resident creatives.
+          {{ about.description }}
         </p>
         <NuxtLink
           to="/about"

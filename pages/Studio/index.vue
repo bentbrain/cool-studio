@@ -4,6 +4,8 @@ import studio1 from "@/assets/images/studio1.webp";
 import studio2 from "@/assets/images/studio2.webp";
 import props from "@/assets/images/props-on-shelf.webp";
 const route = useRoute();
+
+const text = await queryContent("studio/text").findOne();
 </script>
 
 <template>
@@ -16,15 +18,9 @@ const route = useRoute();
     </Html>
     <Section>
       <div class="text">
-        <h1 class="pageTitle">{{ route.name }}</h1>
-        <p>
-          The Studio consists of a white cyclorama that is 5.6m wide, 4m high
-          and 5.4m deep and is suitable for all types of photo or film shoots.
-          The space includes a retro inspired hair and makeup station, lounge
-          area, kitchenette, bathroom and a roller door for unloading gear and
-          flooding the space with natural light. We also offer access to
-          in-house props along with gear hire. If you need any assistance with
-          your shoot, our residents are always happy to lend a hand!
+        <h1 class="pageTitle">Studio</h1>
+        <p v-for="(ps, i) in text.excerpt.children" :key="i">
+          {{ ps.children[0].value }}
         </p>
       </div>
 

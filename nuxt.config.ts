@@ -7,4 +7,5 @@ export default defineNuxtConfig({
       routes: ["/contact", "/contact/thanks"],
     },
   },
+  modules: ["@nuxt/content"],
 });
