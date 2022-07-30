@@ -4,7 +4,7 @@ import { defineNuxtConfig } from "nuxt";
 export default defineNuxtConfig({
   nitro: {
     prerender: {
-      routes: ["/contact"],
+      routes: ["/contact", "/contact/thanks"],
     },
   },
 });
