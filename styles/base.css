@@ -64,8 +64,9 @@ h1 {
   color: var(--pink);
   font-family: "Manrope", sans-serif;
   margin-bottom: 0.3em;
+  text-transform: uppercase;
 }
-h1.overlay {
+text h1.overlay {
   position: absolute;
   max-width: 100%;
 }

@@ -2,7 +2,7 @@
 import instagram from "@/assets/icons/socials/instagram.webp";
 const year = new Date().getFullYear();
 
-const footer = await queryContent("footer").findOne();
+const text = await queryContent("footer").findOne();
 
 onMounted(async () => {
   const footer = document.querySelector("footer");
@@ -15,10 +15,7 @@ onMounted(async () => {
 <template>
   <footer ref="footer">
     <div class="text">
-      <p v-for="(ps, i) in footer.excerpt.children" :key="i">
-        {{ ps.children[0].value }}
-      </p>
-
+      <ContentRenderer class="footer-text" :value="text" />
       <p class="copyright">
         <a class="instagram" href="https://instagram.com/coolstudio.jpg"
           ><img :src="instagram" alt=""
@@ -30,8 +27,8 @@ onMounted(async () => {
   </footer>
 </template>
 
-<style scoped>
-p {
+<style>
+footer p {
   line-height: 1.2;
   font-size: 0.8em;
 }

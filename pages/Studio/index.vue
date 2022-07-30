@@ -91,10 +91,7 @@ const text = await queryContent("studio/text").findOne();
         <ul class="full">
           <li>
             Lighting Hire - $100 (see gear list
-            <a
-              href="https://www.coolstudio.com.au/_files/ugd/070419_b0cbdaaea65e4dfb876826cf43272a09.pdf"
-              >here</a
-            >)
+            <NuxtLink to="/studio/equipment">here</NuxtLink>)
           </li>
           <li>Cyclorama Repaint - $80</li>
           <li>Coloured Backdrop Hire - $70</li>
@@ -228,6 +225,9 @@ th:last-of-type {
 }
 
 @media (max-width: 600px) {
+  .list-grid > * {
+    grid-column: 1 / -1;
+  }
   .text-full,
   .text-block,
   .text {

@@ -16,9 +16,7 @@ const text = await queryContent("community/text").findOne();
     <Section
       ><div class="text">
         <h1 class="pageTitle">Community</h1>
-        <p v-for="(ps, i) in text.excerpt.children" :key="i">
-          {{ ps.children[0].value }}
-        </p>
+        <ContentRenderer :value="text" />
       </div>
       <img class="tvs" :src="tvs" alt="TVs Stacked" />
     </Section>
