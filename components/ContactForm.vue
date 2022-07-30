@@ -13,11 +13,11 @@
   <div>
     <form
       name="NewContact"
-      method="post"
+      method="POST"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
-      <input type="hidden" name="form-name" value="contactFormTest" />
+      <input type="hidden" name="form-name" value="NewContact" />
       <div class="flex">
         <div>
           <label class="required" for="name">Name</label>
