@@ -20,4 +20,4 @@ with removable silver/black cover) 110cm/43”
 
 1 x Godox XPRO TTL Trigger
 
-![image alt text](/content/studio/equipment.png)
+![image alt text](/images/equipment.png)
