@@ -16,7 +16,6 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  padding: 1rem clamp(1rem, 3vw, 2rem) 0.5rem;
 }
 
 footer {
@@ -33,6 +32,7 @@ header nav {
   background: linear-gradient(-45deg, rgba(255, 232, 251, 0.836), rgba(255, 255, 255, 0.759));
   -webkit-backdrop-filter: blur(2rem);
           backdrop-filter: blur(2rem);
+  padding: 0.5rem clamp(1rem, 3vw, 2rem) 0.5rem;
 }
 header nav img {
   max-height: 4rem;
@@ -228,4 +228,4 @@ img.circle {
   .desktop {
     display: none;
   }
-}
+}/*# sourceMappingURL=base.css.map */

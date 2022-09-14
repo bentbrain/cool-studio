@@ -21,7 +21,6 @@ $side-padding: clamp(1rem, 3vw, 2rem);
 header {
     position: sticky;
     top: 0;
-    padding: 1rem $side-padding 0.5rem;
 }
 
 footer {
@@ -37,6 +36,7 @@ header nav {
     gap: 2rem;
     background: linear-gradient(-45deg, rgba(255, 232, 251, 0.836), rgba(255, 255, 255, 0.759));
     backdrop-filter: blur(2rem);
+    padding: 0.5rem $side-padding 0.5rem;
 
     img {
         max-height: 4rem;
