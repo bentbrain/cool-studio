@@ -16,7 +16,7 @@ const props = defineProps({
   isolation: isolate;
   display: grid;
   width: min(80rem, 100%);
-  padding: 4rem clamp(1rem, 3vw, 2rem);
+  padding: 0.5rem clamp(1rem, 3vw, 2rem) 2rem;
   gap: 1rem;
   margin: 0 auto;
   place-self: center;

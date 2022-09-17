@@ -2,7 +2,7 @@
 import flower from "@/assets/2.png";
 import lounge2 from "@/assets/images/lounge2.webp";
 
-const text = await queryContent("about/text").findOne();
+const text = await queryContent("about-page/about-page-content").findOne();
 
 const route = useRoute();
 </script>
