@@ -37,6 +37,7 @@ onMounted(async () => {
 footer p {
   line-height: 1.2;
   font-size: 0.8em;
+  margin: 0;
 }
 
 .copyright a {

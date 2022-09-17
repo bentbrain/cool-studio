@@ -1,7 +1,8 @@
 ---
 layout: blog
-title: Album Launch Event 1
-time: 2022-10-15T09:30:00.000Z
+title: Album Launch Event2
+time: 2022-09-28T09:30:00.000Z
+enabled: false
 ---
 # Album Launch Event
 
