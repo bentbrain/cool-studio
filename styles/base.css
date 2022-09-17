@@ -50,6 +50,10 @@ span.light {
   font-weight: 500;
 }
 
+p {
+  margin-bottom: 0.5em;
+}
+
 h2 {
   font-size: clamp(2.5rem, 6vw, 4rem);
   font-family: "Manrope";
@@ -198,11 +202,11 @@ img.circle {
 }
 
 .page-enter-active {
-  transition: all 0.1s ease-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .page-leave-active {
-  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 0.3s ease-in-out;
 }
 
 .page-enter-from,
@@ -212,11 +216,11 @@ img.circle {
 }
 
 .layout-enter-active {
-  transition: all 0.1s ease-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .layout-leave-active {
-  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 0.3s ease-in-out;
 }
 
 .layout-enter-from,

@@ -2,6 +2,13 @@
 import flower from "@/assets/2.png";
 import tvs from "@/assets/images/tvs.jpg";
 const route = useRoute();
+
+console.log(route.path.replace( /^\//i, ''))
+
+const content = await queryContent().where({ _path: route.path }).findOne()
+
+console.log(content)
+
 </script>
 
 <template>
@@ -13,6 +20,7 @@ const route = useRoute();
       </Head>
     </Html>
     <Section>
+      <h2 class="datehead">{{new Date(content.time).toLocaleDateString()}}</h2>
       <ContentDoc class="content"
         ><template #not-found>
           <div class="text">
@@ -27,6 +35,12 @@ const route = useRoute();
 </template>
 
 <style >
+
+.datehead {
+  margin-bottom: 0;
+}
+
+
 .content {
   display: grid;
   grid-column: 1 / -1;

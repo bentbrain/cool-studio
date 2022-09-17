@@ -32,7 +32,7 @@ const caption = micromark(props.resident.featuredtitle)
   </div>
 </template>
 
-<style scoped>
+<style lang='scss' scoped>
 a {
   text-decoration: unset;
 }
@@ -55,6 +55,7 @@ a:hover {
   background: none;
   -webkit-text-fill-color: unset;
   -webkit-background-clip: unset;
+  
 }
 .top {
   display: flex;
@@ -81,9 +82,18 @@ a:hover {
   margin-bottom: 1rem;
 }
 
+
 @media (max-width: 600px) {
   .card {
     grid-column: 1 / -1 !important;
+
+    h2 {
+      font-size: clamp(1.7rem, 3vw, 2rem);
+    }
+  }
+
+  .socials {
+    gap: 0;
   }
 }
 </style>
