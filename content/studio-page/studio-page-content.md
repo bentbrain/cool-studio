@@ -1,0 +1,5 @@
+---
+layout: blog
+title: Studio Page Content
+---
+The Studio consists of a white cyclorama that is 5.6m wide, 4m high and 5.4m deep and is suitable for all types of photo or film shoots. The space includes a retro inspired hair and makeup station, lounge area, kitchenette, bathroom and a roller door for unloading gear and flooding the space with natural light. We also offer access to in-house props along with gear hire. If you need any assistance with your shoot, our residents are always happy to lend a hand!

@@ -1,5 +1,5 @@
 ---
-name: CHARLIE
+name: Charlie
 description: Charles is a director based in Melbourne, focusing on music videos
   and fashion content. He has worked with various Australian artists and has
   developed a distinct visual style which focuses on creating unique and dynamic
