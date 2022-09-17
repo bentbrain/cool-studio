@@ -2,7 +2,7 @@
 import flower from "@/assets/2.png";
 import tvs from "@/assets/images/tvs.jpg";
 const route = useRoute();
-const text = await queryContent("community/text").findOne();
+const text = await queryContent("community-page/community-page-content").findOne();
 </script>
 
 <template>

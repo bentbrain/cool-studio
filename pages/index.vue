@@ -3,12 +3,13 @@ import interior from "@/assets/images/interior.jpg";
 import studio1 from "@/assets/images/studio1.webp";
 import lounge1 from "@/assets/images/lounge1.webp";
 import email from "@/assets/icons/email.png";
-import instagram from "@/assets/icons/instagram.png";
 import location from "@/assets/icons/location.png";
 import flower from "@/assets/2.png";
+import {micromark} from 'micromark'
 
-const intro = await queryContent("home/intro").findOne();
-const about = await queryContent("home/about").findOne();
+const newIntro = await queryContent("home-page/home-page-content").findOne();
+const newInfo = await queryContent("info/cool-info").findOne();
+
 </script>
 
 <template>
@@ -20,12 +21,9 @@ const about = await queryContent("home/about").findOne();
       <Link rel="icon" :href="flower" as="script" />
     </Html>
     <Section style="display: flex" colour="green">
-      <h1 style="grid-column: 1 / -1; grid-row: 1">
-        {{ intro.title }}
-        <span class="light"> {{ intro.description }}</span>
-      </h1>
-      <img class="image1" :src="studio1" alt="Studio with Light" />
-      <img class="image2" :src="lounge1" alt="Lounge Area of Studio" />
+      <span class="home-head" style="grid-column: 1 / -1; grid-row: 1" v-html="micromark(newIntro.headingtext)" ></span>
+      <img class="image1" :src="newIntro.imageone" alt="Studio with Light" />
+      <img class="image2" :src="newIntro.imagetwo" alt="Lounge Area of Studio" />
     </Section>
     <Section style="display: flex" colour="pink">
       <div
@@ -33,10 +31,8 @@ const about = await queryContent("home/about").findOne();
         class="text"
       >
         <h2>About</h2>
-        <img class="circle" :src="interior" alt="Props in the Studio" />
-        <p>
-          {{ about.description }}
-        </p>
+        <img class="circle" :src="newIntro.image" alt="Props in the Studio" />
+        <div v-html="micromark(newIntro.maintext)" ></div>
         <NuxtLink
           to="/about"
           style="
@@ -88,18 +84,17 @@ const about = await queryContent("home/about").findOne();
       <div style="grid-column: span 4; align-self: end" class="text">
         <div class="contact-grid">
           <img :src="location" alt="" />
-          <p>
-            Factory 2, 5 Kolora Road <br />
-            Heidelberg West, VIC 3081
-          </p>
+          <div v-html="micromark(newInfo.address)" ></div>
           <img :src="email" alt="" />
           <p>
-            <a href="mailto:info@coolstudio.com.au">info@coolstudio.com.au</a>
+            <a :href="`mailto:${newInfo.email}`">{{newInfo.email}}</a>
           </p>
-          <img :src="instagram" alt="" />
-          <a href="https://www.instagram.com/coolstudio.jpg/"
-            >@coolstudio.jpg</a
-          >
+          <div class="subdiv" v-for="(social, i) in newInfo.socials" :key="i" >
+          <img :src="social.icon" :alt="`${social.platform} Icon`">
+          <a :href="social.url">
+          {{social.title}}
+          </a>
+          </div>
         </div>
         <NuxtLink
           to="/contact"
@@ -115,7 +110,12 @@ const about = await queryContent("home/about").findOne();
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" >
+
+.home-page {
+
+
+
 .f-button:nth-child(1) {
   transform: translate(0rem, -5rem);
 }
@@ -160,6 +160,24 @@ const about = await queryContent("home/about").findOne();
   text-align: left;
   gap: 1rem;
   line-height: 1.2;
+
+  .subdiv {
+    grid-column: 1 / -1;
+    display: grid;
+  grid-template-columns: 2rem 1fr;
+  align-items: center;
+  text-align: left;
+  gap: 1rem;
+  line-height: 1.2;
+  }
+
+  img {
+    filter: brightness(0) invert(100%) ;
+  }
+}
+
+.home-head h1 {
+  font-weight: 500;
 }
 
 .contact-grid a {
@@ -214,5 +232,6 @@ const about = await queryContent("home/about").findOne();
     grid-row: 1;
     transform: translateY(1rem);
   }
+}
 }
 </style>

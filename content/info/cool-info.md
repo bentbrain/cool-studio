@@ -9,4 +9,5 @@ socials:
   - icon: /images/instagram.webp
     platform: instagram
     url: https://www.instagram.com/coolstudio.jpg
+    title: '@coolstudio.jpg'
 ---

@@ -26,7 +26,7 @@ const route = useRoute();
   </div>
 </template>
 
-<style scoped>
+<style >
 .content {
   display: grid;
   grid-column: 1 / -1;
