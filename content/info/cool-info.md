@@ -1,4 +1,5 @@
 ---
+title: Info
 logo: /images/logo.png
 phone: "null"
 address: |-

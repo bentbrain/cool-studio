@@ -32,6 +32,7 @@ collections:
     create: true
     slug: "cool-info"
     fields:
+      - { label: "Title", name: "title", widget: "string" }
       - { label: "Logo", name: "logo", widget: "image" }
       - { label: "Contact Number", name: "phone", widget: "string" }
       - { label: "Address", name: "address", widget: "markdown" }
@@ -109,6 +110,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
       - { label: "Title", name: "title", widget: "string" }
+      - {label: "Enabled", name: "enabled", widget: "boolean", default: true}
       - label: "Event time"
         name: "time"
         widget: "datetime"
