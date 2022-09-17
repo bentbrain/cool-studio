@@ -154,6 +154,7 @@ nav ol li:hover::before {
 
 .page-wrapper {
   position: relative;
+  overflow: hidden;
 }
 
 footer {
