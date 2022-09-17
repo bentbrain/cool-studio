@@ -1,0 +1,99 @@
+backend:
+  name: git-gateway
+  repo: bentbrain/cool-studio
+  branch: master # Branch to update (optional; defaults to master)
+media_folder: "/public/images" # Media files will be stored in the repo under images/uploads
+public_folder: "/images"
+collections:
+  - name: "residents"
+    label: "Residents"
+    folder: "content/residents"
+    create: true
+    slug: "{{name}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: 'Color', name: 'color', widget: 'color' }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Featured Image Description", name: "featuredtitle", widget: "markdown" }
+      - { label: "Website", name: "website", widget: "string" }
+      - name: "socials"
+        label: "Socials"
+        create: true
+        widget: "list"
+        fields:
+          - { label: "Icon", name: "icon", widget: "image" }
+          - { label: "Platform", name: "title", widget: "string" }
+          - { label: "Link", name: "link", widget: "string" }
+
+  - name: "information"
+    label: "Studio Information"
+    folder: "content/info"
+    create: true
+    slug: "cool-info"
+    fields:
+      - { label: "Logo", name: "logo", widget: "image" }
+      - { label: "Contact Number", name: "phone", widget: "string" }
+      - { label: "Address", name: "address", widget: "markdown" }
+      - { label: "Email", name: "email", widget: "string" }
+      - name: "socials"
+        label: "Socials"
+        create: true
+        widget: "list"
+        fields:
+          - { label: "Icon", name: "icon", widget: "image" }
+          - { label: "Platform", name: "platform", widget: "string" }
+          - { label: "URL", name: "url", widget: "string" }
+
+  - name: "footer" # Used in routes, e.g., /admin/collections/blog
+    label: "Footer Text" # Used in the UI
+    folder: "content/footer" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{title}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Text", name: "text", widget: "text" }
+
+  - name: "home-page" # Used in routes, e.g., /admin/collections/blog
+    label: "Home Page Content" # Used in the UI
+    folder: "content/home-page" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{title}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Heading Text", name: "headingtext", widget: "markdown" }
+      - { label: "Main Image 1", name: "imageone", widget: "image" }
+      - { label: "Main Image 2", name: "imagetwo", widget: "image" }
+      - { label: "About Image", name: "image", widget: "image" }
+      - { label: "About Text", name: "maintext", widget: "markdown" }
+
+  - name: "about-page" # Used in routes, e.g., /admin/collections/blog
+    label: "About Page" # Used in the UI
+    folder: "content/about-page" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{title}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "About Image", name: "image", widget: "image" }
+      - { label: "About Text", name: "body", widget: "markdown" }
+
+  - name: "studio-page" # Used in routes, e.g., /admin/collections/blog
+    label: "Studio Page" # Used in the UI
+    folder: "content/studio-page" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{title}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Studio Text", name: "body", widget: "markdown" }
+
+  - name: "community-page" # Used in routes, e.g., /admin/collections/blog
+    label: "Community Page" # Used in the UI
+    folder: "content/community-page" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{title}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Community Text", name: "body", widget: "markdown" }
