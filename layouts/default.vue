@@ -40,8 +40,7 @@ const route = useRoute();
   }
   
   .crumb-enter-active {
-    transition: all 0.1s ease-out;
-    transition-delay: 0.3s;
+    transition:  all .3s ease-out, opacity 0.1s ease;
   }
   .crumb-leave-active {
     transition:  all .3s ease-out, opacity 0.1s ease;
