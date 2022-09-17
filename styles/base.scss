@@ -23,6 +23,14 @@ header {
     top: 0;
 }
 
+.crumbs {
+    width: min(80rem, 100%);
+    font-size: 12px;
+    padding-inline: clamp(1rem, 3vw, 2rem);
+    padding-block: 1rem;
+    margin: 0 auto;
+}
+
 footer {
     background-color: var(--yellow);
     text-align: center;
@@ -45,6 +53,10 @@ header nav {
 
 span.light {
     font-weight: 500;
+}
+
+p {
+    margin-bottom: 0.5em;
 }
 
 h2 {
@@ -220,11 +232,11 @@ img {
 
 // transitions
 .page-enter-active {
-    transition: all 0.1s ease-out;
+    transition: all 0.1s ease-in-out;
 }
 
 .page-leave-active {
-    transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+    transition: all 0.3s ease-in-out;
 }
 
 .page-enter-from,
@@ -234,11 +246,11 @@ img {
 }
 
 .layout-enter-active {
-    transition: all 0.1s ease-out;
+    transition: all 0.1s ease-in-out;
 }
 
 .layout-leave-active {
-    transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+    transition: all 0.3s ease-in-out;
 }
 
 .layout-enter-from,

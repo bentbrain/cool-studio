@@ -18,6 +18,8 @@ const socialImages = {
 };
 
 const colours = ["pink", "yellow", "green", "orange"];
+
+
 </script>
 
 <template>

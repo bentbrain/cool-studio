@@ -4,8 +4,9 @@ import studio1 from "@/assets/images/studio1.webp";
 import studio2 from "@/assets/images/studio2.webp";
 import props from "@/assets/images/props-on-shelf.webp";
 const route = useRoute();
-
 const text = await queryContent("studio/text").findOne();
+const newText = await queryContent("studio-page/studio-page-content").findOne();
+
 </script>
 
 <template>
@@ -19,9 +20,36 @@ const text = await queryContent("studio/text").findOne();
     <Section>
       <div class="text">
         <h1 class="pageTitle">Studio</h1>
-        <p v-for="(ps, i) in text.excerpt.children" :key="i">
-          {{ ps.children[0].value }}
+        <ContentRenderer :value="newText" />
+        <h2 style="margin-top: 1rem;" >Rates</h2>
+        <table>
+          <tbody>
+            <tr>
+              <th>Short Session</th>
+              <th>Half Day Session</th>
+              <th>Full Day Session</th>
+            </tr>
+            <tr>
+              <td>2 Hours</td>
+              <td>4 Hours</td>
+              <td>8 Hours</td>
+            </tr>
+            <tr>
+              <td>$160</td>
+              <td>$230</td>
+              <td>$330</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="font-size: 0.8em; text-align: center;">
+          For student discounts or bookings outside these options, contact us.
+          Prices are excl. GST
         </p>
+        <NuxtLink
+          style="text-decoration: none; display: block; margin: 0 auto; width: max-content"
+          to="/contact"
+          ><Button style="margin: 1rem auto 2rem">Book Now</Button></NuxtLink
+        >
       </div>
 
       <div class="image-grid">
@@ -33,24 +61,26 @@ const text = await queryContent("studio/text").findOne();
     </Section>
 
     <Section>
-      <div class="text-full">
+      <!-- <div class="text-full">
         <h2>Rates</h2>
         <table>
-          <tr>
-            <th>Short Session</th>
-            <th>Half Day Session</th>
-            <th>Full Day Session</th>
-          </tr>
-          <tr>
-            <td>2 Hours</td>
-            <td>4 Hours</td>
-            <td>8 Hours</td>
-          </tr>
-          <tr>
-            <td>$160</td>
-            <td>$230</td>
-            <td>$330</td>
-          </tr>
+          <tbody>
+            <tr>
+              <th>Short Session</th>
+              <th>Half Day Session</th>
+              <th>Full Day Session</th>
+            </tr>
+            <tr>
+              <td>2 Hours</td>
+              <td>4 Hours</td>
+              <td>8 Hours</td>
+            </tr>
+            <tr>
+              <td>$160</td>
+              <td>$230</td>
+              <td>$330</td>
+            </tr>
+          </tbody>
         </table>
         <p style="text-align: center; font-size: 0.8em">
           For student discounts or bookings outside these options, contact us.
@@ -61,7 +91,7 @@ const text = await queryContent("studio/text").findOne();
           to="/contact"
           ><Button style="margin: 1rem auto 2rem">Book Now</Button></NuxtLink
         >
-      </div>
+      </div> -->
       <div class="text-block left">
         <h3>Studio Hire Includes</h3>
         <div class="list-grid">
@@ -101,9 +131,13 @@ const text = await queryContent("studio/text").findOne();
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 h1 {
   grid-column: span 6;
+}
+
+a {
+  text-decoration: underline;
 }
 
 h3 {
@@ -189,21 +223,16 @@ table {
   table-layout: fixed;
 }
 
-tr:nth-child(2) {
-  background: var(--orange);
+tr {
+  background: rgb(234, 234, 234);
 }
-
-tr:nth-child(3) {
-  background: var(--yellow);
-}
-
 tr:hover {
   filter: brightness(1.03);
 }
 
 tr:first-of-type {
   background: var(--pink);
-  color: black;
+  color: white;
 }
 
 td,
@@ -214,15 +243,25 @@ th {
   font-weight: bold;
 }
 
-td:first-of-type,
-th:first-of-type {
-  border-radius: 100vw 0 0 100vw;
+
+tr:first-of-type {
+  *:first-of-type {
+    border-radius: 8px 0 0 0;
+  }
+  *:last-of-type {
+    border-radius: 0 8px 0 0;
+  }
 }
 
-td:last-of-type,
-th:last-of-type {
-  border-radius: 0 100vw 100vw 0;
+tr:last-of-type {
+  *:first-of-type {
+    border-radius: 0 0 0 8px;
+  }
+  *:last-of-type {
+    border-radius: 0  0 8px 0;
+  }
 }
+
 
 @media (max-width: 600px) {
   .list-grid > * {
