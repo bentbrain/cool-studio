@@ -15,14 +15,18 @@ const route = useRoute();
     <Section>
       <ContentDoc class="content"
         ><template #not-found>
-          <p>No content found.</p>
+          <div class="text">
+            <h1>Whoopsie</h1>
+            <p>Sorry, we couldn't find that page.</p>
+            <NuxtLink to="/"><Button>Home</Button></NuxtLink>
+          </div>
         </template>
       </ContentDoc></Section
     >
   </div>
 </template>
 
-<style>
+<style scoped>
 .content {
   display: grid;
   grid-column: 1 / -1;
@@ -31,6 +35,15 @@ const route = useRoute();
 .content img {
   max-width: min(40rem, 100%);
   margin-block: 2rem;
+}
+
+.text {
+  grid-column: 1 / -1;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
 }
 
 </style>
