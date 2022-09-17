@@ -34,6 +34,8 @@ const route = useRoute();
 <style scoped>
   .crumb-enter-from{
     opacity: 0;
+    height: 0;
+    padding-block: 0;
     transform: translateY(-15px);
   }
   
@@ -42,7 +44,7 @@ const route = useRoute();
     transition-delay: 0.3s;
   }
   .crumb-leave-active {
-    transition:  all .7s ease-out, opacity 0.3s ease;
+    transition:  all .3s ease-out, opacity 0.1s ease;
   }
   
   .crumb-enter,
