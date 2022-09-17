@@ -2,6 +2,8 @@
 import data from "@/assets/residents/residents.json";
 import flower from "@/assets/2.png";
 const route = useRoute();
+
+const residents = await queryContent('residents').find()
 </script>
 
 <template>
@@ -14,9 +16,9 @@ const route = useRoute();
     </Html>
     <Section
       ><h1 class="pageTitle">Residents</h1>
-      <ResidentCard
+      <ResidentCard2
         class="resident"
-        v-for="(resident, i) in data"
+        v-for="(resident, i) in residents"
         :key="i"
         :resident="resident"
         :index="i"

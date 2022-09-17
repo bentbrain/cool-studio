@@ -1,48 +1,33 @@
 <script setup>
-import socials from "@/assets/socials.json";
-import instagram from "@/assets/icons/socials/instagram.webp";
-import facebook from "@/assets/icons/socials/facebook.webp";
-import twitter from "@/assets/icons/socials/twitter.webp";
-import youtube from "@/assets/icons/socials/youtube.webp";
+import {micromark} from 'micromark'
 
 const props = defineProps({
   resident: Object,
-  index: String,
 });
 
-const socialImages = {
-  instagram: instagram,
-  facebook: facebook,
-  twitter: twitter,
-  youtube: youtube,
-};
-
-const colours = ["pink", "yellow", "green", "orange"];
-
+const caption = micromark(props.resident.featuredtitle)
 
 </script>
 
 <template>
-  <div class="card" :style="`background-color: var(--${colours[index - 1]})`">
+  <div class="card" :style="`background-color: ${resident.color}`">
     <div class="top">
       <a v-if="resident.website != ''" :href="resident.website">
-        <h2>{{ resident.first_name }}</h2>
+        <h2>{{ resident.name }}</h2>
       </a>
-      <h2 v-else>{{ resident.first_name }}</h2>
+      <h2 v-else>{{ resident.name }}</h2>
       <div class="socials">
-        <a v-for="(social, key, i) in resident.socials" :key="i" :href="social"
-          ><img :src="socialImages[key]" :alt="`${key} Icon`"
+        <a v-for="(social, i) in resident.socials" :key="i" :href="social.link"
+          ><img :src="social.icon" :alt="`${social.title} Icon`"
         /></a>
       </div>
     </div>
     <img
-      :src="resident.featured_media.image"
-      :alt="resident.featured_media.description"
+      :src="resident.thumbnail"
+      :alt="resident.featuredtitle"
     />
-    <p class="caption">
-      <strong>{{ resident.featured_media.title }}</strong>
-      {{ resident.featured_media.description }}
-    </p>
+    <div class="caption" v-html="caption" >
+    </div>
     <p>{{ resident.description }}</p>
   </div>
 </template>
