@@ -3,11 +3,7 @@ import flower from "@/assets/2.png";
 import tvs from "@/assets/images/tvs.jpg";
 const route = useRoute();
 
-console.log(route.path.replace( /^\//i, ''))
-
 const content = await queryContent().where({ _path: route.path }).findOne()
-
-console.log(content)
 
 </script>
 
@@ -20,7 +16,7 @@ console.log(content)
       </Head>
     </Html>
     <Section>
-      <h2 class="datehead">{{new Date(content.time).toLocaleDateString()}}</h2>
+      <h2 v-if="route.path.includes('community/')" class="datehead">{{new Date(content.time).toLocaleDateString()}}</h2>
       <ContentDoc class="content"
         ><template #not-found>
           <div class="text">
