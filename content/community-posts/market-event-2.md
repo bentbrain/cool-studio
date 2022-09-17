@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Album Launch Event
-time: August 14, 2022 8:30 PM
+time: 2022-08-14T10:30:00.000Z
 ---
 # Album Launch Event
 
