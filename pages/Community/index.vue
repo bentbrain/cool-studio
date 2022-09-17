@@ -1,8 +1,14 @@
 <script setup>
 import flower from "@/assets/2.png";
 import tvs from "@/assets/images/tvs.jpg";
+import moment from 'moment';
 const route = useRoute();
 const text = await queryContent("community-page/community-page-content").findOne();
+
+const now = moment().format('LLL')
+
+
+
 </script>
 
 <template>

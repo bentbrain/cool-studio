@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Album Launch Event
-time: September 28, 2022 8:30 PM
+time: September 01, 2022 8:30 PM
 ---
 # Album Launch Event
 
