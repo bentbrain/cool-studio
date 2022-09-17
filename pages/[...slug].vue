@@ -1,6 +1,7 @@
 <script setup>
 import flower from "@/assets/2.png";
 import tvs from "@/assets/images/tvs.jpg";
+
 const route = useRoute();
 
 const content = await queryContent().where({ _path: route.path }).findOne()

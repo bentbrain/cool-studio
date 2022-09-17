@@ -24,4 +24,14 @@ h1 {
   grid-column: 1 / -1;
   margin-bottom: 2rem;
 }
+
+@media (max-width: 600px) {
+
+  h1 {
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  
+}
+
 </style>

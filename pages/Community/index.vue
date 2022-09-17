@@ -9,8 +9,6 @@ const now = new Date()
 const upcoming = await queryContent('community').where({time: { $gte: now }, enabled: true}).find()
 const past = await queryContent('community').where({time: { $lt: now }, enabled: true}).find()
 
-console.log(upcoming)
-console.log(past < 0)
 
 </script>
 

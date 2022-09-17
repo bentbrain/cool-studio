@@ -7,6 +7,11 @@
     --yellow: rgb(255, 227, 84);
     font-family: 'Trispace', sans-serif;
     --footer-height: 5rem;
+    overscroll-behavior: none;
+}
+
+html, body {
+    overscroll-behavior: none;
 }
 
 $side-padding: clamp(1rem, 3vw, 2rem);

@@ -1,5 +1,5 @@
 ---
-title: Info
+title: Studio Info
 logo: /images/logo.png
 phone: "null"
 address: |-

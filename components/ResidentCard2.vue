@@ -55,6 +55,7 @@ a:hover {
   background: none;
   -webkit-text-fill-color: unset;
   -webkit-background-clip: unset;
+  font-size: clamp(1.7rem, 4vw, 3rem);
   
 }
 .top {
@@ -69,9 +70,9 @@ a:hover {
 .socials {
   display: flex;
   align-items: center;
-
   justify-content: flex-end;
   margin-block: 0.5em;
+  gap: 0;
 }
 
 .socials a {
@@ -87,13 +88,6 @@ a:hover {
   .card {
     grid-column: 1 / -1 !important;
 
-    h2 {
-      font-size: clamp(1.7rem, 3vw, 2rem);
-    }
-  }
-
-  .socials {
-    gap: 0;
   }
 }
 </style>

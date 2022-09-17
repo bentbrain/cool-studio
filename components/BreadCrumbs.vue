@@ -20,7 +20,7 @@ const text2 = test.map((x) => x.join("/"));
     <span v-for="(p, i) in path" :key="i">
       <span v-show="i > 0" class="slash">/</span>
       <NuxtLink v-show="i > 0" :to="i < path.length - 1 ? text2[i] : ''">
-        {{ p.replace("-", " ") }}
+        {{ p.replaceAll("-", " ") }}
       </NuxtLink>
     </span>
   </div>

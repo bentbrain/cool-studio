@@ -6,6 +6,13 @@
   --yellow: rgb(255, 227, 84);
   font-family: "Trispace", sans-serif;
   --footer-height: 5rem;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+}
+
+html, body {
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
 }
 
 .content-wrapper {
@@ -241,4 +248,4 @@ img.circle {
   .desktop {
     display: none;
   }
-}/*# sourceMappingURL=base.css.map */
+}

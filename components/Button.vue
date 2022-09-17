@@ -41,6 +41,6 @@ button:hover img {
 img {
   transition: all 0.7s cubic-bezier(0, 0.56, 0.01, 0.96);
   max-width: 2rem;
-  filter: brightness(10) saturate(0);
+  filter: saturate(0) brightness(0) invert(100);
 }
 </style>
