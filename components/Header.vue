@@ -2,13 +2,18 @@
 import logo from "@/assets/logo.png";
 
 const menuOpen = useState("test", () => false);
+
+const lockBody = () => {
+  document.body.style.overflow = menuOpen.value ? 'hidden' : ''
+}
+
 </script>
 
 <template>
   <header>
     <nav :class="menuOpen ? 'showoverflow' : 'hideoverflow'">
       <NuxtLink to="/"><img :src="logo" alt="" /></NuxtLink>
-      <button class="burger" @click="menuOpen = !menuOpen">
+      <button class="burger" @click="menuOpen = !menuOpen, lockBody()">
         <svg
           id="Layer_1"
           xmlns="http://www.w3.org/2000/svg"
@@ -46,20 +51,20 @@ const menuOpen = useState("test", () => false);
         </svg>
       </button>
       <ol :class="menuOpen ? 'active' : 'hide'">
-        <button class="closeMenu" @click="menuOpen = !menuOpen">X</button>
-        <NuxtLink @click="menuOpen = !menuOpen" to="/">
+        <button class="closeMenu" @click="menuOpen = !menuOpen, lockBody()">X</button>
+        <NuxtLink @click="menuOpen = false, lockBody()" to="/">
           <li>Home</li>
         </NuxtLink>
-        <NuxtLink @click="menuOpen = !menuOpen" to="/about">
+        <NuxtLink @click="menuOpen = false, lockBody()" to="/about">
           <li>About</li>
         </NuxtLink>
-        <NuxtLink @click="menuOpen = !menuOpen" to="/studio">
+        <NuxtLink @click="menuOpen = false, lockBody()" to="/studio">
           <li>The Studio</li>
         </NuxtLink>
-        <NuxtLink @click="menuOpen = !menuOpen" to="/residents">
+        <NuxtLink @click="menuOpen = false, lockBody()" to="/residents">
           <li>Residents</li>
         </NuxtLink>
-        <NuxtLink @click="menuOpen = !menuOpen" to="/community">
+        <NuxtLink @click="menuOpen = false, lockBody()" to="/community">
           <li>Community</li>
         </NuxtLink>
       </ol>
@@ -67,7 +72,7 @@ const menuOpen = useState("test", () => false);
   </header>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 header {
   isolation: isolate;
   z-index: 100;
@@ -127,6 +132,11 @@ button {
     border: unset;
     background: unset;
     cursor: pointer;
+    &:focus, &:active {
+      border: none;
+      outline: none;
+      background: none;
+    }
   }
 
   .cls-1 {

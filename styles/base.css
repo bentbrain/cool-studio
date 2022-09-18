@@ -15,6 +15,10 @@ html, body {
       overscroll-behavior: none;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .content-wrapper {
   min-height: calc(100vh - var(--footer-height));
 }
@@ -248,4 +252,4 @@ img.circle {
   .desktop {
     display: none;
   }
-}
+}/*# sourceMappingURL=base.css.map */
