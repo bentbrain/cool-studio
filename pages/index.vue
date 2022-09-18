@@ -117,15 +117,15 @@ const newInfo = await queryContent("info/cool-info").findOne();
 
 
 .f-button:nth-child(1) {
-  transform: translate(0rem, -5rem);
+  transform: translate(0rem, -3rem);
 }
 
 .f-button:nth-child(2) {
-  transform: translate(-3rem, 3rem);
+  transform: translate(-3rem, 4rem);
 }
 
 .f-button:nth-child(3) {
-  transform: translate(-5rem, -4rem);
+  transform: translate(-5rem, -2rem);
 }
 
 .image1 {
